@@ -17,6 +17,7 @@ namespace Dir
             }
             Console.WriteLine("");
         }
+
         public static void Dir_Out()
         {
             Console.Clear();
@@ -50,10 +51,23 @@ namespace Dir
                     Console.WriteLine("  " + file.Name);
                     allFiles.Add(file.FullName);
                 }
+                int i = 2;
+                foreach (var file in dir.GetDirectories())
+                {
+                    Console.SetCursorPosition(80, i);
+                    Console.WriteLine(file.CreationTime);
+                    i++;
+                }
                 foreach (var file in dir.GetFiles())
                 {
                     Console.WriteLine("  " + file.Name);
                     allFiles.Add(file.FullName);
+                }
+                foreach (var file in dir.GetFiles())
+                {
+                    Console.SetCursorPosition(80, i);
+                    Console.WriteLine(file.CreationTime);
+                    i++;
                 }
                 DirAction.FilesChoise();
             }
@@ -73,10 +87,23 @@ namespace Dir
                     Console.WriteLine("  " + file.Name);
                     allFiles.Add(file.FullName);
                 }
+                int i = 2;
+                foreach (var file in dir.GetDirectories())
+                {
+                    Console.SetCursorPosition(80, i);
+                    Console.WriteLine(file.CreationTime);
+                    i++;
+                }
                 foreach (var file in dir.GetFiles())
                 {
                     Console.WriteLine("  " + file.Name);
                     allFiles.Add(file.FullName);
+                }
+                foreach (var file in dir.GetFiles())
+                {
+                    Console.SetCursorPosition(80, i);
+                    Console.WriteLine(file.CreationTime);
+                    i++;
                 }
                 DirAction.FilesChoise();
             }
