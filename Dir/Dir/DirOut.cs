@@ -9,6 +9,7 @@ namespace Dir
     public static class DirOut
     {
         public static List<string> allFiles = new List<string>();
+        private static int DriveCount = 0;
         private static void Lines()
         {
             for (int i = 0; i < 120; i++)
@@ -32,6 +33,7 @@ namespace Dir
                     {
                         allFiles.Add(drive.Name);
                         Console.WriteLine($"  {drive.Name} {drive.TotalFreeSpace / 1024 / 1024 / 1024}.ГБ доступно из {drive.TotalSize / 1024 / 1024 / 1024}.ГБ");
+                        DriveCount++;
                     }
                 }
                 DirAction.FilesChoise();
@@ -51,6 +53,7 @@ namespace Dir
                     Console.WriteLine("  " + file.Name);
                     allFiles.Add(file.FullName);
                 }
+                Console.WriteLine(allFiles.Count);
                 int i = 2;
                 foreach (var file in dir.GetDirectories())
                 {
