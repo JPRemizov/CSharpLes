@@ -23,7 +23,7 @@ namespace TypingTest
                     Console.ResetColor();
                     Console.SetCursorPosition(0, maxLines + 1);
                     Console.Write("Оставшееся время: " + seconds + " ");
-                    if (correctText.Length == text.Length - 2 || seconds <= 0)
+                    if (correctText.Length == text.Length - 1 || seconds <= 0)
                     {
                         stopWatch.Stop();
                         TimeSpan ts = stopWatch.Elapsed;
