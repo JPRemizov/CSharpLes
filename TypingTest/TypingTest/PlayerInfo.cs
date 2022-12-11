@@ -11,7 +11,7 @@ namespace TypingTest
         public string name;
         public float SPM;
         public float SPS;
-        public List<PlayerInfo> players = new List<PlayerInfo>();
+        public static List<PlayerInfo> players = new List<PlayerInfo>();
         public PlayerInfo(PlayerInfo player)
         {
             this.name = player.name;

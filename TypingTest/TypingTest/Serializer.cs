@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace TypingTest
 {
-    public class Serializer
+    public static class Serializer
     {
         public static string text;
         public static string LoadText()
